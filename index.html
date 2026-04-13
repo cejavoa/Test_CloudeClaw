@@ -8,6 +8,11 @@
   <meta property="og:title" content="Natural Hands Balm - Premium Chemical-Free Skincare">
   <meta property="og:description" content="Discover Natural Hands Balm, a premium chemical-free hand care product made with natural ingredients.">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <link rel="alternate" hreflang="en" href="https://example.com/">
+  <link rel="alternate" hreflang="es" href="https://example.com/es/">
+  <link rel="canonical" href="https://example.com/">
   <style>
     * {
       margin: 0;
@@ -28,6 +33,32 @@
       border-radius: 8px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
       overflow: hidden;
+    }
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 100;
+    }
+    .language-toggle button {
+      padding: 8px 16px;
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+    .language-toggle button.active {
+      background: white;
+      color: #667eea;
+    }
+    .language-toggle button:hover {
+      transform: translateY(-2px);
     }
     header {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -94,6 +125,13 @@
       border-radius: 5px;
       border-left: 4px solid #667eea;
     }
+    .ingredient-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 3px;
+      margin-bottom: 12px;
+    }
     .ingredient-card h3 {
       color: #667eea;
       margin-bottom: 8px;
@@ -125,6 +163,13 @@
       text-align: center;
       border-radius: 8px;
       margin-top: 40px;
+    }
+    .cta-section img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
     }
     .cta-section h2 {
       color: white;
@@ -209,100 +254,120 @@
         padding: 12px 30px;
         font-size: 1rem;
       }
+      .language-toggle {
+        top: 10px;
+        right: 10px;
+      }
+      .language-toggle button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="language-toggle">
+    <button id="langEN" class="lang-btn active" data-lang="en">EN</button>
+    <button id="langES" class="lang-btn" data-lang="es">ES</button>
+  </div>
+
   <div class="container">
     <!-- Header: Product Overview and Value Proposition -->
     <header>
-      <h1>Natural Hands Balm</h1>
-      <p>Premium Chemical-Free Hand Care</p>
+      <h1 data-en="Natural Hands Balm" data-es="Bálsamo Natural para Manos">Natural Hands Balm</h1>
+      <p data-en="Premium Chemical-Free Hand Care" data-es="Cuidado Premium de Manos sin Químicos">Premium Chemical-Free Hand Care</p>
     </header>
 
     <div class="content">
       <!-- Section 1: Product Overview and Value Proposition -->
       <section>
-        <h2>Product Overview</h2>
-        <p>Natural Hands Balm is a luxurious, chemical-free hand care product designed to nourish, protect, and rejuvenate your hands. Crafted with pure, natural ingredients and free from harmful chemicals, our balm provides deep moisturization and lasting softness for healthy, beautiful hands.</p>
-        <p><strong>Our Commitment:</strong> We believe in the power of nature. Every ingredient in Natural Hands Balm is carefully selected for its purity and efficacy, with no synthetic additives, parabens, sulfates, or artificial fragrances.</p>
+        <h2 data-en="Product Overview" data-es="Descripción del Producto">Product Overview</h2>
+        <p data-en="Natural Hands Balm is a luxurious, chemical-free hand care product designed to nourish, protect, and rejuvenate your hands. Crafted with pure, natural ingredients and free from harmful chemicals, our balm provides deep moisturization and lasting softness for healthy, beautiful hands." data-es="Bálsamo Natural para Manos es un producto de cuidado de manos lujoso y libre de químicos, diseñado para nutrir, proteger y rejuvenecer tus manos. Elaborado con ingredientes naturales puros y libre de químicos dañinos, nuestro bálsamo proporciona hidratación profunda y suavidad duradera para manos saludables y hermosas.">Natural Hands Balm is a luxurious, chemical-free hand care product designed to nourish, protect, and rejuvenate your hands. Crafted with pure, natural ingredients and free from harmful chemicals, our balm provides deep moisturization and lasting softness for healthy, beautiful hands.</p>
+        <p><strong data-en="Our Commitment:" data-es="Nuestro Compromiso:">Our Commitment:</strong> <span data-en="We believe in the power of nature. Every ingredient in Natural Hands Balm is carefully selected for its purity and efficacy, with no synthetic additives, parabens, sulfates, or artificial fragrances." data-es="Creemos en el poder de la naturaleza. Cada ingrediente en Bálsamo Natural para Manos se selecciona cuidadosamente por su pureza y eficacia, sin aditivos sintéticos, parabenos, sulfatos ni fragancias artificiales.">We believe in the power of nature. Every ingredient in Natural Hands Balm is carefully selected for its purity and efficacy, with no synthetic additives, parabens, sulfates, or artificial fragrances.</span></p>
       </section>
 
       <!-- Section 2: Key Ingredients and Sourcing Information -->
       <section>
-        <h2>Key Ingredients</h2>
-        <p>Our formula combines the finest natural ingredients, ethically sourced and sustainably harvested:</p>
+        <h2 data-en="Key Ingredients" data-es="Ingredientes Clave">Key Ingredients</h2>
+        <p data-en="Our formula combines the finest natural ingredients, ethically sourced and sustainably harvested:" data-es="Nuestra fórmula combina los mejores ingredientes naturales, obtenidos éticamente y cosechados de manera sostenible:">Our formula combines the finest natural ingredients, ethically sourced and sustainably harvested:</p>
         <div class="ingredients-grid">
           <div class="ingredient-card">
-            <h3>Shea Butter</h3>
-            <p>Rich in vitamins A and E, shea butter provides deep moisturization and promotes skin elasticity.</p>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect fill='%23E8D5C4' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' font-size='16' fill='%23667eea' text-anchor='middle' dominant-baseline='middle'%3EShea Butter%3C/text%3E%3C/svg%3E" alt="Shea Butter ingredient image">
+            <h3 data-en="Shea Butter" data-es="Manteca de Karité">Shea Butter</h3>
+            <p data-en="Rich in vitamins A and E, shea butter provides deep moisturization and promotes skin elasticity." data-es="Rica en vitaminas A y E, la manteca de karité proporciona hidratación profunda y promueve la elasticidad de la piel.">Rich in vitamins A and E, shea butter provides deep moisturization and promotes skin elasticity.</p>
           </div>
           <div class="ingredient-card">
-            <h3>Coconut Oil</h3>
-            <p>Natural antimicrobial and antioxidant properties help protect and nourish delicate hand skin.</p>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect fill='%23F5E6D3' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' font-size='16' fill='%23667eea' text-anchor='middle' dominant-baseline='middle'%3ECoconut Oil%3C/text%3E%3C/svg%3E" alt="Coconut Oil ingredient image">
+            <h3 data-en="Coconut Oil" data-es="Aceite de Coco">Coconut Oil</h3>
+            <p data-en="Natural antimicrobial and antioxidant properties help protect and nourish delicate hand skin." data-es="Las propiedades antimicrobianas y antioxidantes naturales ayudan a proteger y nutrir la delicada piel de las manos.">Natural antimicrobial and antioxidant properties help protect and nourish delicate hand skin.</p>
           </div>
           <div class="ingredient-card">
-            <h3>Jojoba Oil</h3>
-            <p>Lightweight and easily absorbed, jojoba oil mimics skin's natural oils for optimal hydration.</p>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect fill='%23F0E4D4' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' font-size='16' fill='%23667eea' text-anchor='middle' dominant-baseline='middle'%3EJojoba Oil%3C/text%3E%3C/svg%3E" alt="Jojoba Oil ingredient image">
+            <h3 data-en="Jojoba Oil" data-es="Aceite de Jojoba">Jojoba Oil</h3>
+            <p data-en="Lightweight and easily absorbed, jojoba oil mimics skin's natural oils for optimal hydration." data-es="Ligero y fácilmente absorbido, el aceite de jojoba imita los aceites naturales de la piel para una hidratación óptima.">Lightweight and easily absorbed, jojoba oil mimics skin's natural oils for optimal hydration.</p>
           </div>
           <div class="ingredient-card">
-            <h3>Beeswax</h3>
-            <p>Creates a protective barrier that locks in moisture while allowing skin to breathe naturally.</p>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect fill='%23F9F3E6' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' font-size='16' fill='%23667eea' text-anchor='middle' dominant-baseline='middle'%3EBeeswax%3C/text%3E%3C/svg%3E" alt="Beeswax ingredient image">
+            <h3 data-en="Beeswax" data-es="Cera de Abeja">Beeswax</h3>
+            <p data-en="Creates a protective barrier that locks in moisture while allowing skin to breathe naturally." data-es="Crea una barrera protectora que retiene la humedad mientras permite que la piel respire naturalmente.">Creates a protective barrier that locks in moisture while allowing skin to breathe naturally.</p>
           </div>
           <div class="ingredient-card">
-            <h3>Lavender Extract</h3>
-            <p>Calming and soothing properties help reduce irritation and promote relaxation.</p>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect fill='%23E8D9E8' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' font-size='16' fill='%23667eea' text-anchor='middle' dominant-baseline='middle'%3ELavender%3C/text%3E%3C/svg%3E" alt="Lavender Extract ingredient image">
+            <h3 data-en="Lavender Extract" data-es="Extracto de Lavanda">Lavender Extract</h3>
+            <p data-en="Calming and soothing properties help reduce irritation and promote relaxation." data-es="Las propiedades calmantes y suavizantes ayudan a reducir la irritación y promover la relajación.">Calming and soothing properties help reduce irritation and promote relaxation.</p>
           </div>
           <div class="ingredient-card">
-            <h3>Vitamin E</h3>
-            <p>Powerful antioxidant that protects against environmental damage and supports skin repair.</p>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect fill='%23FFF8E7' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' font-size='16' fill='%23667eea' text-anchor='middle' dominant-baseline='middle'%3EVitamin E%3C/text%3E%3C/svg%3E" alt="Vitamin E ingredient image">
+            <h3 data-en="Vitamin E" data-es="Vitamina E">Vitamin E</h3>
+            <p data-en="Powerful antioxidant that protects against environmental damage and supports skin repair." data-es="Antioxidante poderoso que protege contra el daño ambiental y apoya la reparación de la piel.">Powerful antioxidant that protects against environmental damage and supports skin repair.</p>
           </div>
         </div>
       </section>
 
       <!-- Section 3: Product Benefits and Use Cases -->
       <section>
-        <h2>Benefits & Use Cases</h2>
-        <p>Natural Hands Balm is perfect for anyone seeking premium hand care. Experience these key benefits:</p>
+        <h2 data-en="Benefits & Use Cases" data-es="Beneficios y Casos de Uso">Benefits & Use Cases</h2>
+        <p data-en="Natural Hands Balm is perfect for anyone seeking premium hand care. Experience these key benefits:" data-es="Bálsamo Natural para Manos es perfecto para cualquiera que busque cuidado premium de manos. Experimenta estos beneficios clave:">Natural Hands Balm is perfect for anyone seeking premium hand care. Experience these key benefits:</p>
         <ul class="benefits-list">
-          <li><strong>Deep Moisturization:</strong> Intensive hydration that penetrates and nourishes dry, cracked hands</li>
-          <li><strong>Chemical-Free Formula:</strong> No parabens, sulfates, synthetic fragrances, or harmful additives</li>
-          <li><strong>Fast Absorption:</strong> Lightweight texture absorbs quickly without greasy residue</li>
-          <li><strong>Long-Lasting Protection:</strong> Creates a protective barrier against environmental stressors</li>
-          <li><strong>Soothing & Calming:</strong> Natural extracts help reduce irritation and inflammation</li>
-          <li><strong>Anti-Aging Support:</strong> Rich antioxidants help minimize fine lines and maintain youthful skin</li>
-          <li><strong>Suitable for All Skin Types:</strong> Gentle enough for sensitive skin, effective for all hand conditions</li>
+          <li><strong data-en="Deep Moisturization:" data-es="Hidratación Profunda:">Deep Moisturization:</strong> <span data-en="Intensive hydration that penetrates and nourishes dry, cracked hands" data-es="Hidratación intensiva que penetra y nutre las manos secas y agrietadas">Intensive hydration that penetrates and nourishes dry, cracked hands</span></li>
+          <li><strong data-en="Chemical-Free Formula:" data-es="Fórmula Libre de Químicos:">Chemical-Free Formula:</strong> <span data-en="No parabens, sulfates, synthetic fragrances, or harmful additives" data-es="Sin parabenos, sulfatos, fragancias sintéticas ni aditivos dañinos">No parabens, sulfates, synthetic fragrances, or harmful additives</span></li>
+          <li><strong data-en="Fast Absorption:" data-es="Absorción Rápida:">Fast Absorption:</strong> <span data-en="Lightweight texture absorbs quickly without greasy residue" data-es="La textura ligera se absorbe rápidamente sin dejar residuo grasiento">Lightweight texture absorbs quickly without greasy residue</span></li>
+          <li><strong data-en="Long-Lasting Protection:" data-es="Protección Duradera:">Long-Lasting Protection:</strong> <span data-en="Creates a protective barrier against environmental stressors" data-es="Crea una barrera protectora contra factores ambientales estresantes">Creates a protective barrier against environmental stressors</span></li>
+          <li><strong data-en="Soothing & Calming:" data-es="Suavizante y Calmante:">Soothing & Calming:</strong> <span data-en="Natural extracts help reduce irritation and inflammation" data-es="Los extractos naturales ayudan a reducir la irritación e inflamación">Natural extracts help reduce irritation and inflammation</span></li>
+          <li><strong data-en="Anti-Aging Support:" data-es="Apoyo Antienvejecimiento:">Anti-Aging Support:</strong> <span data-en="Rich antioxidants help minimize fine lines and maintain youthful skin" data-es="Los antioxidantes ricos ayudan a minimizar las líneas finas y mantener la piel joven">Rich antioxidants help minimize fine lines and maintain youthful skin</span></li>
+          <li><strong data-en="Suitable for All Skin Types:" data-es="Adecuado para Todos los Tipos de Piel:">Suitable for All Skin Types:</strong> <span data-en="Gentle enough for sensitive skin, effective for all hand conditions" data-es="Lo suficientemente suave para piel sensible, efectivo para todas las condiciones de las manos">Gentle enough for sensitive skin, effective for all hand conditions</span></li>
         </ul>
-        <p><strong>Ideal For:</strong> Daily hand care, dry and cracked hands, sensitive skin, post-wash hydration, overnight intensive treatment, and professional hand care routines.</p>
+        <p><strong data-en="Ideal For:" data-es="Ideal Para:">Ideal For:</strong> <span data-en="Daily hand care, dry and cracked hands, sensitive skin, post-wash hydration, overnight intensive treatment, and professional hand care routines." data-es="Cuidado diario de manos, manos secas y agrietadas, piel sensible, hidratación post-lavado, tratamiento intensivo nocturno y rutinas profesionales de cuidado de manos.">Daily hand care, dry and cracked hands, sensitive skin, post-wash hydration, overnight intensive treatment, and professional hand care routines.</span></p>
       </section>
 
       <!-- Section 4: Usage Instructions -->
       <section>
-        <h2>How to Use</h2>
-        <p>For best results, follow these simple steps:</p>
+        <h2 data-en="How to Use" data-es="Cómo Usar">How to Use</h2>
+        <p data-en="For best results, follow these simple steps:" data-es="Para obtener los mejores resultados, sigue estos pasos simples:">For best results, follow these simple steps:</p>
         <div class="usage-steps">
           <ol>
-            <li><strong>Cleanse:</strong> Wash your hands with warm water and pat dry thoroughly</li>
-            <li><strong>Apply:</strong> Take a small amount (about the size of a pea) and warm it between your palms</li>
-            <li><strong>Massage:</strong> Gently massage the balm into your hands, focusing on dry areas and cuticles</li>
-            <li><strong>Absorb:</strong> Allow 2-3 minutes for the balm to absorb before touching other surfaces</li>
-            <li><strong>Repeat:</strong> Use 2-3 times daily, or as needed for optimal hydration</li>
-            <li><strong>Overnight Treatment:</strong> Apply generously before bed and wear cotton gloves for intensive care</li>
+            <li><strong data-en="Cleanse:" data-es="Limpiar:">Cleanse:</strong> <span data-en="Wash your hands with warm water and pat dry thoroughly" data-es="Lava tus manos con agua tibia y sécalas completamente">Wash your hands with warm water and pat dry thoroughly</span></li>
+            <li><strong data-en="Apply:" data-es="Aplicar:">Apply:</strong> <span data-en="Take a small amount (about the size of a pea) and warm it between your palms" data-es="Toma una pequeña cantidad (aproximadamente del tamaño de un guisante) y caliéntala entre tus palmas">Take a small amount (about the size of a pea) and warm it between your palms</span></li>
+            <li><strong data-en="Massage:" data-es="Masajear:">Massage:</strong> <span data-en="Gently massage the balm into your hands, focusing on dry areas and cuticles" data-es="Masajea suavemente el bálsamo en tus manos, enfocándote en áreas secas y cutículas">Gently massage the balm into your hands, focusing on dry areas and cuticles</span></li>
+            <li><strong data-en="Absorb:" data-es="Absorber:">Absorb:</strong> <span data-en="Allow 2-3 minutes for the balm to absorb before touching other surfaces" data-es="Permite que el bálsamo se absorba durante 2-3 minutos antes de tocar otras superficies">Allow 2-3 minutes for the balm to absorb before touching other surfaces</span></li>
+            <li><strong data-en="Repeat:" data-es="Repetir:">Repeat:</strong> <span data-en="Use 2-3 times daily, or as needed for optimal hydration" data-es="Usa 2-3 veces al día, o según sea necesario para una hidratación óptima">Use 2-3 times daily, or as needed for optimal hydration</span></li>
+            <li><strong data-en="Overnight Treatment:" data-es="Tratamiento Nocturno:">Overnight Treatment:</strong> <span data-en="Apply generously before bed and wear cotton gloves for intensive care" data-es="Aplica generosamente antes de acostarte y usa guantes de algodón para cuidado intensivo">Apply generously before bed and wear cotton gloves for intensive care</span></li>
           </ol>
         </div>
       </section>
 
       <!-- Section 5: Call-to-Action (CTA) -->
       <section class="cta-section">
-        <h2>Ready to Transform Your Hand Care?</h2>
-        <p>Join thousands of satisfied customers who have discovered the natural difference. Experience the luxury of chemical-free hand care today.</p>
-        <a href="#purchase" class="cta-button">Shop Now</a>
-        <a href="#inquiry" class="cta-button">Contact Us</a>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250'%3E%3Crect fill='%23764ba2' width='400' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3EPremium Hand Care%3C/text%3E%3C/svg%3E" alt="Premium hand care product showcase">
+        <h2 data-en="Ready to Transform Your Hand Care?" data-es="¿Listo para Transformar tu Cuidado de Manos?">Ready to Transform Your Hand Care?</h2>
+        <p data-en="Join thousands of satisfied customers who have discovered the natural difference. Experience the luxury of chemical-free hand care today." data-es="Únete a miles de clientes satisfechos que han descubierto la diferencia natural. Experimenta el lujo del cuidado de manos sin químicos hoy.">Join thousands of satisfied customers who have discovered the natural difference. Experience the luxury of chemical-free hand care today.</p>
+        <a href="#purchase" class="cta-button" data-en="Shop Now" data-es="Comprar Ahora">Shop Now</a>
+        <a href="#inquiry" class="cta-button" data-en="Contact Us" data-es="Contáctanos">Contact Us</a>
       </section>
     </div>
 
     <footer>
-      <p>&copy; 2024 Natural Hands Balm. All rights reserved. | Premium Chemical-Free Hand Care</p>
+      <p data-en="© 2024 Natural Hands Balm. All rights reserved. | Premium Chemical-Free Hand Care" data-es="© 2024 Bálsamo Natural para Manos. Todos los derechos reservados. | Cuidado Premium de Manos sin Químicos">© 2024 Natural Hands Balm. All rights reserved. | Premium Chemical-Free Hand Care</p>
     </footer>
   </div>
 
@@ -314,6 +379,54 @@
     gtag('js', new Date());
     // TODO: Replace GA_MEASUREMENT_ID with actual Google Analytics 4 measurement ID
     // gtag('config', 'GA_MEASUREMENT_ID');
+
+    // Language Toggle and i18n Implementation
+    const currentLang = localStorage.getItem('language') || 'en';
+    const htmlElement = document.documentElement;
+    htmlElement.lang = currentLang;
+
+    // Set initial active button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if (btn.dataset.lang === currentLang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Apply initial language
+    applyLanguage(currentLang);
+
+    // Language toggle event listeners
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const lang = this.dataset.lang;
+        localStorage.setItem('language', lang);
+        htmlElement.lang = lang;
+        applyLanguage(lang);
+
+        // Update active button
+        document.querySelectorAll('.lang-btn').forEach(b => {
+          b.classList.remove('active');
+        });
+        this.classList.add('active');
+
+        // Track language switch in GA4
+        gtag('event', 'language_switch', {
+          'language': lang
+        });
+      });
+    });
+
+    // Function to apply language to all elements with data attributes
+    function applyLanguage(lang) {
+      document.querySelectorAll('[data-en][data-es]').forEach(element => {
+        const text = element.dataset[lang];
+        if (text) {
+          element.textContent = text;
+        }
+      });
+    }
   </script>
 </body>
 </html>
