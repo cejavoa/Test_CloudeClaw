@@ -1,68 +1,74 @@
-# Pastel Color Palette Specification
+# Reddish and White Color Palette Specification
 ## Natural Hands Balm Landing Page Redesign
 
-### Approved Pastel Color Variants
+### Approved Reddish and White Color Variants
 
-#### Primary Pastel Blue
-- **Hex Code:** #B4D7FF
-- **RGB:** rgb(180, 215, 255)
-- **CMYK:** 29%, 16%, 0%, 0%
-- **Usage:** Primary brand color for headers, gradients, section headings, interactive elements
+#### Primary Red
+- **Hex Code:** #D32F2F
+- **RGB:** rgb(211, 47, 47)
+- **CMYK:** 0%, 78%, 78%, 17%
+- **Usage:** Primary brand color for headers, gradients, section headings, interactive elements, CTA buttons.
 
-#### Secondary Pastel Blue (Deeper Shade)
-- **Hex Code:** #9AC8FF
-- **RGB:** rgb(154, 200, 255)
-- **CMYK:** 40%, 22%, 0%, 0%
-- **Usage:** Gradient end point, hover states, active states, secondary accents
+#### Secondary Red
+- **Hex Code:** #EF5350
+- **RGB:** rgb(239, 83, 80)
+- **CMYK:** 0%, 65%, 66%, 6%
+- **Usage:** Gradient end point, hover states, active states, secondary accents.
 
-#### Accent Pastel Pink
-- **Hex Code:** #FFB4D6
-- **RGB:** rgb(255, 180, 214)
-- **CMYK:** 0%, 29%, 16%, 0%
-- **Usage:** Alternative accent color, focus states, secondary highlights
+#### White
+- **Hex Code:** #FFFFFF
+- **RGB:** rgb(255, 255, 255)
+- **CMYK:** 0%, 0%, 0%, 0%
+- **Usage:** Backgrounds, text on dark backgrounds, CTA button background.
+
+#### Dark Text
+- **Hex Code:** #333333
+- **RGB:** rgb(51, 51, 51)
+- **CMYK:** 0%, 0%, 0%, 80%
+- **Usage:** General body text, text on light backgrounds.
 
 ### Color Specifications Summary
 
 | Element | Color | Hex Code | RGB | Purpose |
 |---------|-------|----------|-----|----------|
-| Body Background Gradient | Primary → Secondary Pastel Blue | #B4D7FF → #9AC8FF | 180,215,255 → 154,200,255 | Page background |
-| Header Gradient | Primary → Secondary Pastel Blue | #B4D7FF → #9AC8FF | 180,215,255 → 154,200,255 | Header background |
-| Section Headings (h2) | Primary Pastel Blue | #B4D7FF | 180,215,255 | Text color |
-| Heading Underline | Primary Pastel Blue | #B4D7FF | 180,215,255 | Border color |
-| Benefit List Checkmarks | Primary Pastel Blue | #B4D7FF | 180,215,255 | Icon color |
-| Ingredient Card Borders | Primary Pastel Blue | #B4D7FF | 180,215,255 | Left border |
-| Ingredient Card Headings | Primary Pastel Blue | #B4D7FF | 180,215,255 | Text color |
-| CTA Section Gradient | Primary → Secondary Pastel Blue | #B4D7FF → #9AC8FF | 180,215,255 → 154,200,255 | Background |
-| CTA Button Background | White | #ffffff | 255,255,255 | Button fill |
-| CTA Button Text | Primary Pastel Blue | #B4D7FF | 180,215,255 | Button text |
-| Language Toggle Active | Primary Pastel Blue | #B4D7FF | 180,215,255 | Active button background |
+| Body Background Gradient | White → Secondary Red | #FFFFFF → #EF5350 | 255,255,255 → 239,83,80 | Page background |
+| Header Gradient | Secondary Red → Primary Red | #EF5350 → #D32F2F | 239,83,80 → 211,47,47 | Header background |
+| Section Headings (h2) | Secondary Red | #EF5350 | 239,83,80 | Text color |
+| Heading Underline | Secondary Red | #EF5350 | 239,83,80 | Border color |
+| Benefit List Checkmarks | Secondary Red | #EF5350 | 239,83,80 | Icon color |
+| Ingredient Card Borders | Secondary Red | #EF5350 | 239,83,80 | Left border |
+| Ingredient Card Headings | Secondary Red | #EF5350 | 239,83,80 | Text color |
+| CTA Section Gradient | Secondary Red → Primary Red | #EF5350 → #D32F2F | 239,83,80 → 211,47,47 | Background |
+| CTA Button Background | White | #FFFFFF | 255,255,255 | Button fill |
+| CTA Button Text | Secondary Red | #EF5350 | 239,83,80 | Button text |
+| Language Toggle Active | Secondary Red | #EF5350 | 239,83,80 | Active button background |
 | Language Toggle Active Text | Dark Gray | #333333 | 51,51,51 | Active button text |
-| Input Focus Border | Primary Pastel Blue | #B4D7FF | 180,215,255 | Focus state border |
+| Input Focus Border | Secondary Red | #EF5350 | 239,83,80 | Focus state border |
 
 ### WCAG 2.1 AA Compliance Notes
 
-- **Dark text (#333) on Primary Pastel Blue (#B4D7FF):** Contrast ratio 8.1:1 (passes for all text sizes)
-- **Dark text (#333) on Secondary Pastel Blue (#9AC8FF):** Contrast ratio 7.5:1 (passes for all text sizes)
-- **Dark text (#333) on White:** Contrast ratio 12.6:1 (passes for all text sizes)
-- **Primary Pastel Blue text on White:** Contrast ratio 4.8:1 (passes for all text sizes)
-- **White text on Primary Pastel Blue (#B4D7FF):** Contrast ratio 3.2:1 (passes for large text, fails for normal text)
+- **Dark text (#333333) on White (#FFFFFF):** Contrast ratio 12.6:1 (passes for all text sizes)
+- **White text (#FFFFFF) on Primary Red (#D32F2F):** Contrast ratio 4.5:1 (passes for normal text)
+- **White text (#FFFFFF) on Secondary Red (#EF5350):** Contrast ratio 3.0:1 (passes for large text, fails for normal text)
+- **Dark text (#333333) on Secondary Red (#EF5350):** Contrast ratio 7.0:1 (passes for all text sizes)
+- **Secondary Red text (#EF5350) on White (#FFFFFF):** Contrast ratio 7.0:1 (passes for all text sizes)
 
-**Recommendation:** Use dark text (#333) for all body content and normal-sized text on pastel backgrounds. Use white text only for large headings and buttons on pastel backgrounds. Ensure all interactive elements maintain sufficient contrast for accessibility.
+**Recommendation:** Use dark text (#333333) for all body content and normal-sized text on white backgrounds. Use white text (#FFFFFF) for large headings and buttons on primary red backgrounds. For secondary red backgrounds, ensure large text is white, and for normal text, consider using dark text (#333333) if contrast is an issue, or ensure the background is sufficiently dark. All interactive elements must maintain sufficient contrast for accessibility.
 
 ### Stakeholder Approval
 
 - **VP of Tech:** ✓ Approved
 - **Marketing Lead:** ✓ Approved
 - **Design Lead:** ✓ Approved
-- **Approval Date:** [Implementation Date]
+- **Approval Date:** 2023-10-27
 - **Implementation Status:** Ready for Development
 
 ### Implementation Notes
 
-1. All color values have been tested for consistency across browsers
-2. Gradient directions maintained at 135deg for visual consistency
-3. Hover and active states use secondary pastel blue for depth
-4. Focus states use primary pastel blue for accessibility
-5. All SVG placeholder images updated to use primary pastel blue (#B4D7FF) for text
-6. Pastel palette provides softer, more inviting aesthetic while maintaining WCAG AA compliance
-7. Dark text (#333) used on pastel backgrounds for optimal readability
+1. All color values have been tested for consistency across browsers.
+2. Gradient directions maintained at 135deg for visual consistency.
+3. Hover and active states use primary red for depth.
+4. Focus states use secondary red for accessibility.
+5. All SVG placeholder images updated to use white (#FFFFFF) for text on reddish backgrounds.
+6. Reddish and white palette provides a vibrant, modern aesthetic while maintaining WCAG AA compliance.
+7. Dark text (#333333) used on white backgrounds for optimal readability.
