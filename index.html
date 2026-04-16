@@ -45,8 +45,8 @@
     }
     .language-toggle button {
       padding: 8px 16px;
-      border: 2px solid #333333;
-      background: transparent;
+      border: 2px solid #E0E0E0; /* Updated for default grey */
+      background: #E0E0E0; /* Updated for default grey */
       color: #333333;
       border-radius: 5px;
       cursor: pointer;
@@ -55,13 +55,17 @@
       transition: all 0.3s;
     }
     .language-toggle button.active {
-      background: #EF5350;
-      color: white;
+      background: #FFD700; /* Updated for active yellow */
+      color: #333333; /* Updated for readable text */
     }
     .language-toggle button:hover {
-      background: #D32F2F;
-      color: white;
-      transform: translateY(-2px);
+      background: #FFD700; /* Updated for hover yellow */
+      color: #333333; /* Updated for readable text */
+      /* transform: translateY(-2px); Removed as per plan */
+    }
+    .language-toggle button:focus { /* Added focus state */
+      background: #FFD700;
+      color: #333333;
     }
     header {
       background: linear-gradient(135deg, #EF5350 0%, #D32F2F 100%);
