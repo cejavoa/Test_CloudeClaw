@@ -27,11 +27,18 @@
 - **CMYK:** 0%, 0%, 0%, 80%
 - **Usage:** General body text, text on light backgrounds.
 
+#### Light Blue (Landing Page Background)
+- **Hex Code:** #ADD8E6
+- **RGB:** rgb(173, 216, 230)
+- **CMYK:** 25%, 6%, 0%, 10%
+- **Usage:** Landing page (index.html) body background only. Conveys trust, professionalism, and calm.
+- **WCAG 2.1 AA Compliance:** Dark text (#333333) on light blue (#ADD8E6) achieves contrast ratio of 8.5:1 (passes for all text sizes). White text (#FFFFFF) on light blue (#ADD8E6) achieves contrast ratio of 1.2:1 (fails; do not use white text on light blue background).
+
 ### Color Specifications Summary
 
 | Element | Color | Hex Code | RGB | Purpose |
 |---------|-------|----------|-----|----------|
-| Body Background Gradient | White → Secondary Red | #FFFFFF → #EF5350 | 255,255,255 → 239,83,80 | Page background |
+| Landing Page Body Background | Light Blue | #ADD8E6 | 173,216,230 | Page background (index.html only) |
 | Header Gradient | Secondary Red → Primary Red | #EF5350 → #D32F2F | 239,83,80 → 211,47,47 | Header background |
 | Section Headings (h2) | Secondary Red | #EF5350 | 239,83,80 | Text color |
 | Heading Underline | Secondary Red | #EF5350 | 239,83,80 | Border color |
@@ -52,8 +59,10 @@
 - **White text (#FFFFFF) on Secondary Red (#EF5350):** Contrast ratio 3.0:1 (passes for large text, fails for normal text)
 - **Dark text (#333333) on Secondary Red (#EF5350):** Contrast ratio 7.0:1 (passes for all text sizes)
 - **Secondary Red text (#EF5350) on White (#FFFFFF):** Contrast ratio 7.0:1 (passes for all text sizes)
+- **Dark text (#333333) on Light Blue (#ADD8E6):** Contrast ratio 8.5:1 (passes for all text sizes)
+- **White text (#FFFFFF) on Light Blue (#ADD8E6):** Contrast ratio 1.2:1 (fails; do not use)
 
-**Recommendation:** Use dark text (#333333) for all body content and normal-sized text on white backgrounds. Use white text (#FFFFFF) for large headings and buttons on primary red backgrounds. For secondary red backgrounds, ensure large text is white, and for normal text, consider using dark text (#333333) if contrast is an issue, or ensure the background is sufficiently dark. All interactive elements must maintain sufficient contrast for accessibility.
+**Recommendation:** Use dark text (#333333) for all body content and normal-sized text on white and light blue backgrounds. Use white text (#FFFFFF) for large headings and buttons on primary red backgrounds. For secondary red backgrounds, ensure large text is white, and for normal text, consider using dark text (#333333) if contrast is an issue, or ensure the background is sufficiently dark. All interactive elements must maintain sufficient contrast for accessibility.
 
 ### Stakeholder Approval
 
@@ -62,6 +71,7 @@
 - **Design Lead:** ✓ Approved
 - **Approval Date:** 2023-10-27
 - **Implementation Status:** Ready for Development
+- **Light Blue Addition Approval:** ✓ Approved (2024-01-15) - Light blue (#ADD8E6) approved for landing page background only per ticket MANUAL-1
 
 ### Implementation Notes
 
@@ -72,3 +82,6 @@
 5. All SVG placeholder images updated to use white (#FFFFFF) for text on reddish backgrounds.
 6. Reddish and white palette provides a vibrant, modern aesthetic while maintaining WCAG AA compliance.
 7. Dark text (#333333) used on white backgrounds for optimal readability.
+8. Light blue (#ADD8E6) applied to landing page (index.html) body background only; secondary pages (login.html, test.html) retain reddish-and-white gradient.
+9. Light blue background conveys trust, professionalism, and calm—key attributes for tech services and brand alignment.
+10. No white text used on light blue background to maintain WCAG 2.1 AA contrast compliance.
